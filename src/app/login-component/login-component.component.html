@@ -1,0 +1,46 @@
+<div class="container">TO-DO-LIST APP</div><br>
+<div class="container1">
+    <form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+        <div class="form-group">
+          <label for="exampleInputName1">First Name</label>
+          <input type="text" class="form-control" ngModel id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter First Name" name="firstname">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputName2">Last Name</label>
+            <input type="text" class="form-control" ngModel id="exampleInputName2" aria-describedby="nameHelp" placeholder="Enter Last Name" name="lastname">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" ngModel id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">Submit</button><br>
+    </form>
+</div>
+<div *ngIf="submissions.length > 0">
+    <h3>Submissions</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let submission of submissions; let i = index">
+                <td scope="row">{{ i + 1 }}</td>
+                <td>{{ submission.firstname }}</td>
+                <td>{{ submission.lastname }}</td>
+                <td>{{ submission.email }}</td>
+                <td>
+                    <button class="btn btn-secondary edit-btn" (click)="onEdit(i)">Edit</button>
+                    <button class="btn btn-danger delete-btn" (click)="onDelete(i)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,56 @@
+.container{
+    color: blue;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+.container1{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height:330px;
+    background-color: lightsteelblue;
+}
+.form-group{
+    width: 400px;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: darkgray;
+}
+
+.table th, .table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+.submit-btn {
+    width: 400px; 
+}
+
+.edit-btn, .delete-btn {
+    width: 60px; 
+    padding: 2px 5px; 
+}
+
+
+
